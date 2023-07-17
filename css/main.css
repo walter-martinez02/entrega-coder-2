@@ -5,7 +5,7 @@
     box-sizing: border-box; 
 }
 /* globales */
-body{
+body, .fondo{
     background-color:#201A23;
 }
 /* navbar */
@@ -74,12 +74,54 @@ main section div .imagen-venta{
     width: 60%;
     margin: 3.5rem 20% 1.5rem 20%;   
 }
-main section .nombres {
+main section .nombres{
     text-align: center;
 }
 .comentario{
     color: #7E7F9A;
     margin-top: 1rem;
+}
+/* pagina nuestra historia */
+.card-title{
+    color: #E0B7B7;
+}
+.card-text{
+    color: #E7A977;
+}
+.texto-1,.texto-2{
+    text-align: center;
+    width: 16rem;
+    height: 16rem;
+    margin: 2rem ;
+    overflow: auto;
+    background-color: #C04ABC;
+    border: 1px solid #7E7F9A;
+}
+.presentacion{
+    margin: 1rem;
+
+}
+.nuestra-historia h1{
+    color: #06BA63;
+    text-align: center;
+}
+.presentacion img{
+    width: 90%;
+    margin-left: 1rem;
+}
+/* iniciar sesion */
+main .iniciar-sesion{
+    border-radius: 6px;
+    border: 4px solid #C04ABC;
+    margin: 3rem;
+    padding: 1rem 5rem ;
+    text-align: center;
+}
+.iniciar-sesion .registro{
+    color: #06BA63;
+}
+.iniciar-sesion .boton-form{
+    margin: 1.5rem;
 }
 /* propiedades mq */
 @media screen and (min-width:1000px) {
@@ -111,7 +153,51 @@ main section .nombres {
         display: grid;
         grid-template-columns: repeat(2,1fr);
     }
-    .tienda .img-deskt{
+    .img-deskt{
         display: block;
     }
+    /* nuestra historia */
+    .nuestra-historia h1{
+        margin: 2rem;
+    }
+    main .usando-grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3,1fr);
+        
+        grid-template-areas: 
+        "texto-1 personas-1"
+        "texto-2 personas-2"
+        "exterior exterior";
+    }
+    section .texto-1{
+        grid-area: texto-1;
+    }
+    section .texto-2{
+        grid-area: texto-2;
+    }
+    section .foto-1{
+        grid-area: personas-1;
+    }
+    section .foto-2{
+        grid-area: personas-2;
+    }
+    section .foto-3{
+        grid-area: exterior;
+       
+    }
+    .presentacion{
+    padding-top: 1rem;
+    height: 30rem;
+    }
+    .card{
+        height: 30rem;
+        width: 30rem;
+        padding-top: 5rem;
+    }
+    .foto-3 img{
+     height: 100%;
+     width: 95%;  
+    }
+    
 }
